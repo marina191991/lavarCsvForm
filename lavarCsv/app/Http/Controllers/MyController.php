@@ -55,7 +55,6 @@ class   MyController extends Controller
 
         if ($lName) {
             $lName = mb_strtolower($lName);
-            // $filtered = $collection->whereIn('price', [150, 200]);
             $usersObjArr = $usersObjArr->filter(function ($user) use ($lName) {
                 $userLow = mb_strtolower($user->getLastName());
                 return str_contains($userLow, $lName);
