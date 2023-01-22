@@ -81,6 +81,7 @@ class   MyController extends Controller
             });
         }
         if (!($ageMin) && ($ageMax)) {
+            
             $usersObjArr = $usersObjArr->filter(function ($user) use ($ageMax) {
                 $age = $user->getAge();
 
